@@ -2,212 +2,305 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Divya Prakash Jain | Senior Technical Writer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divya Prakash Jain | Technical Writer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body { font-family: Arial; margin:0; background:#f4f6f9; color:#333; }
-header { background:#0f172a; color:white; padding:60px 20px; text-align:center; }
-section { max-width:1100px; margin:auto; padding:40px 20px; }
-h2 { color:#0f172a; }
-.card {
-  background:white;
-  padding:25px;
-  margin:20px 0;
-  border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+:root {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --card: rgba(255,255,255,0.05);
+  --accent: #38bdf8;
 }
-.btn {
-  display:inline-block;
-  padding:12px 25px;
-  border-radius:8px;
-  margin:10px;
-  color:white;
+
+.light {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --card: rgba(0,0,0,0.05);
+}
+
+body {
+  margin:0;
+  font-family:Poppins;
+  background:var(--bg);
+  color:var(--text);
+  transition:0.3s;
+}
+
+/* NAVBAR */
+nav {
+  position:sticky;
+  top:0;
+  backdrop-filter: blur(12px);
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  z-index:1000;
+}
+
+nav a {
+  color:var(--text);
+  margin:0 10px;
   text-decoration:none;
-  font-weight:bold;
+  font-weight:500;
 }
-.green { background:#22c55e; }
-.blue { background:#2563eb; }
-.linkedin { background:#0a66c2; }
-.tag {
+
+/* HERO */
+.hero {
+  text-align:center;
+  padding:120px 20px;
+}
+
+.hero h1 {
+  color: var(--accent);
+}
+
+.typing {
+  font-size:26px;
+  color:var(--accent);
+}
+
+/* BUTTON */
+.btn {
+  background:var(--accent);
+  padding:12px 20px;
+  border-radius:8px;
+  color:#000;
+  text-decoration:none;
+  margin:10px;
   display:inline-block;
-  background:#e0e7ff;
+  transition:0.3s;
+}
+
+.btn:hover {
+  transform:scale(1.05);
+}
+
+/* CARD */
+.card {
+  background:var(--card);
+  padding:20px;
+  margin:20px 0;
+  border-radius:15px;
+  backdrop-filter: blur(10px);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-8px) scale(1.02);
+}
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* TIMELINE */
+.timeline {
+  border-left:2px solid var(--accent);
+  padding-left:20px;
+}
+
+.timeline div {
+  margin:20px 0;
+}
+
+/* PDF */
+iframe {
+  width:100%;
+  height:400px;
+  border:none;
+  border-radius:10px;
+}
+
+/* TOGGLE */
+.toggle {
+  cursor:pointer;
+  background:var(--accent);
   padding:5px 10px;
-  margin:5px;
-  border-radius:6px;
-  font-size:12px;
+  border-radius:5px;
+}
+
+/* ANIMATION */
+.fade {
+  opacity:0;
+  transform:translateY(30px);
+  transition:1s;
+}
+
+.fade.show {
+  opacity:1;
+  transform:translateY(0);
+}
+
+section {
+  max-width:1100px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+h2 {
+  color:var(--accent);
+  margin-bottom:20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<header>
-<h1>Divya Prakash Jain</h1>
-<p><b>Senior Technical Writer | API Documentation | Healthcare | SaaS | Aerospace</b></p>
-
-<p>
-12+ years of experience delivering user-focused, API-driven, and regulatory-compliant documentation.
-</p>
-
+<!-- NAVBAR -->
+<nav>
+<div><b>Divya</b></div>
 <div>
-<a href="https://drive.google.com/drive/folders/1QGvD4c_IFJYAbW-vyVs0vIczJ-UPAL-B" target="_blank" class="btn green">📄 Resume</a>
-<a href="https://drive.google.com/drive/folders/1KiNUlVymLqi3xHLWzmE8tzplb7yizeot" target="_blank" class="btn blue">📂 Work Samples</a>
-<a href="https://www.linkedin.com/in/divyaprakashjain" target="_blank" class="btn linkedin">🔗 LinkedIn</a>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#work">Work</a>
+<a href="#contact">Contact</a>
+<span class="toggle" onclick="toggleMode()">🌗</span>
 </div>
+</nav>
 
-<p>📞 <a href="tel:+919980435940" style="color:white;">+91 9980435940</a></p>
-<p>📧 dividp@gmail.com</p>
-
-</header>
+<!-- HERO -->
+<section class="hero">
+<h1>Divya Prakash Jain</h1>
+<div class="typing" id="typing"></div>
+<p>I create structured, user-centric, and regulatory-compliant documentation that simplifies complex systems.</p>
+<a href="#work" class="btn">View Work</a>
+<a href="#contact" class="btn">Contact Me</a>
+</section>
 
 <!-- ABOUT -->
-<section>
+<section id="about" class="fade">
 <h2>About Me</h2>
 <div class="card">
-<p>
-Senior Technical Writer with 12+ years of overall experience and 7.6 years of work experience in Technical Writing in Healthcare, SaaS, Communication APIs, IT and Aerospace. I specialize in User Guides, Service Manuals, API documentation, Technical Specifications, Labelling and packaging specification, IFU's, regulatory documentation (ISO 13485, QMS, FDA, CE), and structured authoring using tools like MadCap Flare, MS office, Adobe Acrobat Reader, Editor.
-</p>
+<p>I am a Technical Writer with a background in Mechanical Engineering, transitioned into software and product documentation.</p>
+<p>I collaborate with Agile teams to deliver clear, structured, and user-focused documentation.</p>
+</div>
+</section>
 
-<p>
-I excel at simplifying complex systems, improving developer onboarding, reducing support tickets, and delivering audit-ready documentation.
-</p>
+<!-- EDUCATION -->
+<section id="education" class="fade">
+<h2>Education</h2>
+<div class="grid">
+<div class="card">
+<h3>Bachelor of Engineering (Mechanical)</h3>
+<p><b>Institution:</b> [Your College Name]</p>
+<p><b>Year:</b> [Your Graduation Year]</p>
+<p>Strong foundation in engineering concepts, analytical thinking, and problem-solving.</p>
+</div>
+</div>
+</section>
+
+<!-- TIMELINE -->
+<section class="fade">
+<h2>Career Journey</h2>
+<div class="timeline">
+<div><b>🎓 Engineering Foundation</b><p>Bachelor’s in Mechanical Engineering</p></div>
+<div><b>🔄 Transition</b><p>Moved into Technical Writing</p></div>
+<div><b>⚙️ Experience</b><p>Worked in Agile teams, created documentation</p></div>
+<div><b>🚀 Present</b><p>Delivering user-centric documentation</p></div>
 </div>
 </section>
 
 <!-- SKILLS -->
-<section>
-<h2>Skills</h2>
+<section class="fade">
+<h2>Skills & Tools</h2>
+<div class="grid">
 <div class="card">
+<h3>Documentation</h3>
+<ul><li>User Guides</li><li>API Docs</li><li>SOPs</li><li>Release Notes</li></ul>
+</div>
+<div class="card">
+<h3>Tools</h3>
+<ul><li>JIRA</li><li>Confluence</li><li>Adobe Acrobat</li><li>Greenshot</li><li>Azure Repos</li></ul>
+</div>
+<div class="card">
+<h3>Methodologies</h3>
+<ul><li>Agile</li><li>Scrum</li><li>SDLC / DDLC</li></ul>
+</div>
+</div>
+</section>
 
-<p><b>Documentation:</b></p>
-<span class="tag">User Guides</span>
-<span class="tag">Service Manuals</span>
-<span class="tag">Online Help</span>
-<span class="tag">Release Notes</span>
+<!-- WORK -->
+<section id="work" class="fade">
+<h2>Work Samples</h2>
+<div class="grid">
+<div class="card">
+<h3>User Guide</h3>
+<iframe src="sample.pdf"></iframe>
+</div>
+<div class="card">
+<h3>API Documentation</h3>
+<iframe src="sample.pdf"></iframe>
+</div>
+</div>
+</section>
 
-<p><b>API & Technical:</b></p>
-<span class="tag">REST APIs</span>
-<span class="tag">OpenAPI / Swagger</span>
-<span class="tag">Postman</span>
-<span class="tag">HL7</span>
-<span class="tag">Mirth</span>
-
-<p><b>Tools:</b></p>
-<span class="tag">MadCap Flare</span>
-<span class="tag">Confluence</span>
-<span class="tag">JIRA</span>
-<span class="tag">Azure Repos</span>
-<span class="tag">MS Office</span>
-<span class="tag">Adobe Acrobat</span>
-<span class="tag">Snipping Tool</span>
-<span class="tag">Greenshot</span>
-
-<p><b>Methodologies:</b></p>
-<span class="tag">Agile</span>
-<span class="tag">Scrum</span>
-<span class="tag">SDLC</span>
-<span class="tag">DDLC</span>
-
-<p><b>Regulatory:</b></p>
-<span class="tag">ISO 13485</span>
-<span class="tag">QMS</span>
-<span class="tag">DHF / DMR / DHR</span>
-
+<!-- CASE STUDY -->
+<section class="fade">
+<h2>Case Study</h2>
+<div class="card">
+<p><b>Problem:</b> Users struggled with workflows</p>
+<p><b>Solution:</b> Structured documentation & visuals</p>
+<p><b>Tools:</b> JIRA, Confluence</p>
+<p><b>Impact:</b> Improved usability and clarity</p>
 </div>
 </section>
 
 <!-- IMPACT -->
-<section>
+<section class="fade">
 <h2>Impact Highlights</h2>
 <div class="card">
 <ul>
-<li>Improved technician accuracy by 35% through structured documentation</li>
-<li>Reduced support tickets by 20% via troubleshooting guides</li>
-<li>Accelerated onboarding time by 25% across healthcare platforms</li>
-<li>Improved API integration speed by 40%</li>
-<li>Ensured audit compliance with zero non-conformances</li>
+<li>Improved documentation usability</li>
+<li>Collaborated with Agile teams</li>
+<li>Delivered structured documentation</li>
 </ul>
 </div>
 </section>
 
-<!-- CASE STUDIES -->
-<section>
-<h2>Case Studies</h2>
-
-<div class="card">
-<h3>Healthcare Integration Platform (Case Connect)</h3>
-<p><b>Company:</b> Healthcare Imaging Organization</p>
-<p><b>Problem:</b> Complex installation and integration involving HL7, Mirth, SQL Server.</p>
-<p><b>Solution:</b> Created service manuals, upgrade guides, and troubleshooting documentation.</p>
-<p><b>Impact:</b> Reduced support tickets by 20% and improved technician accuracy by 35%.</p>
-</div>
-
-<div class="card">
-<h3>Healthcare Insurance Platform Documentation</h3>
-<p><b>Company:</b> Healthcare SaaS Organization</p>
-<p><b>Problem:</b> Complex workflows for US healthcare systems.</p>
-<p><b>Solution:</b> Created 30+ user guides and SOPs.</p>
-<p><b>Impact:</b> Reduced onboarding time by 25% and ensured ISO compliance.</p>
-</div>
-
-<div class="card">
-<h3>API Documentation (WhatsApp, SMS, Email APIs)</h3>
-<p><b>Company:</b> Communication API Platform</p>
-<p><b>Problem:</b> Lack of structured API documentation.</p>
-<p><b>Solution:</b> Developed REST API documentation and reference guides.</p>
-<p><b>Impact:</b> Improved developer integration speed by 40%.</p>
-</div>
-
-<div class="card">
-<h3>Medical Device Documentation</h3>
-<p><b>Company:</b> Medical Device Organization</p>
-<p><b>Problem:</b> Regulatory documentation requirements.</p>
-<p><b>Solution:</b> Created DHF, risk documentation, and manuals.</p>
-<p><b>Impact:</b> Ensured compliance with ISO 13485 and FDA standards.</p>
-</div>
-
-<div class="card">
-<h3>Aerospace Test Documentation</h3>
-<p><b>Company:</b> Aerospace Organization</p>
-<p><b>Problem:</b> Complex qualification test reporting.</p>
-<p><b>Solution:</b> Developed structured test reports.</p>
-<p><b>Impact:</b> Improved regulatory submission clarity.</p>
-</div>
-
-</section>
-
-<!-- WORK -->
-<section>
-<h2>Work Samples</h2>
-<div class="card" style="text-align:center;">
-<a href="https://drive.google.com/drive/folders/1KiNUlVymLqi3xHLWzmE8tzplb7yizeot" target="_blank" class="btn blue">
-👉 View Work Samples
-</a>
-</div>
-</section>
-
 <!-- CONTACT -->
-<section>
+<section id="contact" class="fade">
 <h2>Contact</h2>
 <div class="card">
-<p>📧 Email: dividp@gmail.com</p>
-<p>📞 <a href="tel:+919980435940">+91 9980435940</a></p>
-<p>
-🔗 <a href="https://www.linkedin.com/in/divyaprakashjain" target="_blank">LinkedIn</a>
-</p>
+<p>Email: dividp@gmail.com</p>
+<p>LinkedIn: linkedin.com/in/divyaprakashjain</p>
+<a href="resume.pdf" class="btn">Download Resume</a>
 </div>
 </section>
 
-<!-- CTA -->
-<section>
-<div class="card" style="text-align:center;">
-<h2>Let’s Work Together 🚀</h2>
-<p>
-Open to Senior Technical Writer roles in API, Healthcare, SaaS, and Enterprise domains.
-</p>
-</div>
-</section>
+<script>
+// DARK MODE
+function toggleMode(){
+  document.body.classList.toggle("light");
+}
+
+// TYPING
+const text = "Technical Writer | API Documentation | User Guides";
+let i=0;
+function typing(){
+  if(i<text.length){
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing,50);
+  }
+}
+typing();
+
+// SCROLL ANIMATION
+const faders = document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+  faders.forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight-100){
+      el.classList.add('show');
+    }
+  })
+});
+</script>
 
 </body>
-  </html>
+</html>
