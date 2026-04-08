@@ -22,7 +22,6 @@ body {
   color:var(--text);
 }
 
-/* NAV */
 nav {
   position:sticky;
   top:0;
@@ -38,7 +37,6 @@ nav a {
   text-decoration:none;
 }
 
-/* HERO */
 .hero {
   text-align:center;
   padding:100px 20px;
@@ -49,7 +47,6 @@ nav a {
   font-size:24px;
 }
 
-/* CARD */
 .card {
   background:var(--card);
   padding:20px;
@@ -78,22 +75,11 @@ h2 {
   color:var(--accent);
 }
 
-/* BUTTON */
-.btn {
-  background:var(--accent);
-  padding:10px 20px;
-  color:#000;
-  border-radius:8px;
-  text-decoration:none;
-}
-
-/* CODE BLOCK */
 .code {
   background:#020617;
   padding:15px;
   border-radius:10px;
   font-family:monospace;
-  overflow:auto;
 }
 </style>
 </head>
@@ -109,104 +95,217 @@ h2 {
 </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
 <h1>Divya Prakash Jain</h1>
 <div class="typing" id="typing"></div>
-<p>Technical Writer specializing in API documentation, user guides, and structured content.</p>
+
+<p>
+I create user-centric, structured, and regulatory-compliant documentation that simplifies complex systems and improves product usability.
+</p>
+
+<p style="margin-top:15px; color:#94a3b8;">
+Focused on API documentation, user guides, and enterprise documentation.
+</p>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
 <div class="card">
-<p>Technical Writer with a Mechanical Engineering background, experienced in creating clear, structured, and user-centric documentation.</p>
+<p>I am a Technical Writer with a background in Mechanical Engineering, transitioned into software and product documentation.</p>
+
+<p>My journey into technical writing was driven by a strong interest in simplifying complex systems and improving user understanding. I specialize in creating structured, user-centric documentation that enhances usability and reduces ambiguity.</p>
+
+<p>I have collaborated with cross-functional teams including developers, QA, and product managers in Agile environments to deliver clear, consistent, and high-quality documentation.</p>
 </div>
 </section>
 
+<!-- EDUCATION -->
 <section>
 <h2>Education</h2>
 <div class="card">
 <p><b>Bachelor of Engineering (Mechanical)</b></p>
-<p>Add Your College Name | Year</p>
+<p>Margadarshi study centre(KSOU)| 2026 expected</p>
+<p><b>Post Graduation Diploma (Project Management)</b></p>
+<p>MITSDE(Pune University)| 2010</p>
+  <p><b>Diploma in (Mechanical) Engineering</b></p>
+<p>L V Govt. Polytechnic(Board of Technical Education, Bangalore)| 2004</p>
 </div>
 </section>
 
+<!-- CAREER -->
 <section>
 <h2>Career Journey</h2>
 <div class="card">
 <ul>
-<li>Engineering Foundation</li>
-<li>Transition to Technical Writing</li>
-<li>Worked with Agile teams</li>
-<li>Delivered structured documentation</li>
+<li>Engineering foundation in Mechanical domain</li>
+<li>Transitioned into Technical Writing</li>
+<li>Worked with Agile and Scrum teams</li>
+<li>Delivered structured documentation for complex systems</li>
 </ul>
 </div>
 </section>
 
+<!-- SKILLS -->
 <section>
 <h2>Skills & Tools</h2>
 <div class="grid">
+
 <div class="card">
 <h3>Documentation</h3>
-<ul><li>User Guides</li><li>API Docs</li><li>SOPs</li></ul>
+<ul>
+<li>User Guides</li>
+<li>API Documentation</li>
+<li>SOPs & Process Docs</li>
+<li>Release Notes</li>
+<li>UI Documentation</li>
+</ul>
 </div>
+
 <div class="card">
 <h3>Tools</h3>
-<ul><li>JIRA</li><li>Confluence</li><li>Adobe Acrobat</li></ul>
+<ul>
+<li>JIRA</li>
+<li>Confluence</li>
+<li>Adobe Acrobat</li>
+<li>Greenshot / Snipping Tool</li>
+<li>MS Office</li>
+<li>Azure Repos</li>
+</ul>
 </div>
+
+<div class="card">
+<h3>Methodologies</h3>
+<ul>
+<li>Agile</li>
+<li>Scrum</li>
+<li>SDLC</li>
+<li>DDLC</li>
+</ul>
+</div>
+
 </div>
 </section>
 
-<!-- WORK SAMPLES (INLINE, NO PDF) -->
+<!-- CORE STRENGTHS -->
+<section>
+<h2>Core Strengths</h2>
+<div class="card">
+<ul>
+<li>Ability to simplify complex technical concepts</li>
+<li>Strong attention to detail and accuracy</li>
+<li>Structured and consistent documentation approach</li>
+<li>User-focused content creation</li>
+</ul>
+</div>
+</section>
+
+<!-- WORK -->
 <section id="work">
 <h2>Work Samples</h2>
 
 <div class="card">
-<h3>User Guide Sample</h3>
-<div class="code">
-1. Login to application<br>
-2. Navigate to dashboard<br>
-3. Select required module<br>
-4. Perform action<br>
-</div>
+<h3>User Guide – Web Application</h3>
+<p><b>Objective:</b> Enable users to efficiently navigate and perform key actions within the application.</p>
+
+<p><b>Procedure:</b></p>
+<ul>
+<li>Log in using valid credentials</li>
+<li>Access the dashboard</li>
+<li>Select the required module</li>
+<li>Execute desired actions</li>
+</ul>
+
+<p><b>Expected Outcome:</b> Users can complete tasks with minimal guidance.</p>
+<p><b>Notes:</b> Ensure role-based access is enabled.</p>
 </div>
 
 <div class="card">
 <h3>API Documentation Sample</h3>
 <div class="code">
-POST /login<br><br>
-Request:<br>
-{<br>
- "username": "user",<br>
- "password": "pass"<br>
-}<br><br>
-Response:<br>
-{<br>
- "status": "success"<br>
+POST /login
+
+Request:
+{
+ "username": "user",
+ "password": "password"
+}
+
+Response:
+{
+ "status": "success",
+ "token": "abc123"
 }
 </div>
 </div>
 
 <div class="card">
-<h3>SOP Sample</h3>
-<div class="code">
-1. Open Admin Panel<br>
-2. Click Create User<br>
-3. Enter details<br>
-4. Save<br>
-</div>
+<h3>SOP – User Creation Process</h3>
+<ul>
+<li>Open Admin Panel</li>
+<li>Click "Create User"</li>
+<li>Enter user details</li>
+<li>Assign role</li>
+<li>Save</li>
+</ul>
 </div>
 
 </section>
 
+<!-- CASE STUDY -->
 <section>
 <h2>Case Study</h2>
 <div class="card">
-<p><b>Problem:</b> Users confused with workflows</p>
-<p><b>Solution:</b> Created structured documentation</p>
-<p><b>Impact:</b> Improved usability</p>
+<p><b>Problem:</b><br>
+Users faced difficulty understanding system workflows, leading to confusion and inefficiency.
+</p>
+
+<p><b>Approach:</b><br>
+Analyzed user pain points, collaborated with developers and QA teams, and restructured documentation for clarity.
+</p>
+
+<p><b>Solution:</b><br>
+Created step-by-step user guides, simplified technical language, and introduced consistent formatting across documents.
+</p>
+
+<p><b>Tools Used:</b> JIRA, Confluence, MS Word</p>
+
+<p><b>Impact:</b><br>
+• Improved documentation clarity<br>
+• Reduced user confusion<br>
+• Enhanced overall usability
+</p>
 </div>
 </section>
 
+<!-- IMPACT -->
+<section>
+<h2>Impact Highlights</h2>
+<div class="card">
+<ul>
+<li>Improved documentation clarity and user comprehension</li>
+<li>Reduced onboarding confusion through structured content</li>
+<li>Collaborated with cross-functional Agile teams</li>
+<li>Standardized documentation across deliverables</li>
+</ul>
+</div>
+</section>
+
+<!-- WRITING PHILOSOPHY -->
+<section>
+<h2>Writing Philosophy</h2>
+<div class="card">
+<ul>
+<li>Clarity over complexity</li>
+<li>User-first documentation approach</li>
+<li>Consistency and structure</li>
+<li>Accuracy and usability focus</li>
+</ul>
+</div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
 <div class="card">
