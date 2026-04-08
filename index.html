@@ -8,7 +8,7 @@
 body { font-family: Arial; margin:0; background:#f4f6f9; color:#333; }
 header { background:#0f172a; color:white; padding:60px 20px; text-align:center; }
 section { max-width:1000px; margin:auto; padding:40px 20px; }
-h2 { color:#0f172a; margin-bottom:10px; }
+h2 { color:#0f172a; }
 .card {
   background:white;
   padding:25px;
@@ -16,7 +16,17 @@ h2 { color:#0f172a; margin-bottom:10px; }
   border-radius:12px;
   box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
-a { color:#2563eb; text-decoration:none; font-weight:bold; }
+a { text-decoration:none; font-weight:bold; }
+.btn {
+  display:inline-block;
+  padding:12px 25px;
+  border-radius:8px;
+  margin:10px;
+  color:white;
+}
+.green { background:#22c55e; }
+.blue { background:#2563eb; }
+.linkedin { background:#0a66c2; }
 .tag {
   display:inline-block;
   background:#e0e7ff;
@@ -25,35 +35,29 @@ a { color:#2563eb; text-decoration:none; font-weight:bold; }
   border-radius:6px;
   font-size:12px;
 }
-.hero-buttons a {
-  margin:10px;
-  display:inline-block;
-  padding:10px 20px;
-  background:#2563eb;
-  color:white;
-  border-radius:6px;
-}
 </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <header>
 <h1>Divya Prakash Jain</h1>
 <p><b>Senior Technical Writer | API Documentation | Healthcare Systems</b></p>
 
 <p>
-Transforming complex systems into clear, user-focused documentation.
-Specialized in HL7, Mirth, and enterprise integrations.
+Transforming complex systems into clear, structured, and user-friendly documentation.
 </p>
-<div class="hero-buttons">
-<a href="https://drive.google.com/drive/folders/1QGvD4c_IFJYAbW-vyVs0vIczJ-UPAL-B" target="_blank">📄 View / Download Resume</a>
 
-<a href="https://drive.google.com/drive/folders/1KiNUlVymLqi3xHLWzmE8tzplb7yizeot" target="_blank">📂 View Work Samples</a>
-
-<a href="https://www.linkedin.com/in/divyaprakashjain" target="_blank">🔗 LinkedIn</a>
+<div>
+<a href="https://drive.google.com/drive/folders/1QGvD4c_IFJYAbW-vyVs0vIczJ-UPAL-B" target="_blank" class="btn green">📄 Download Resume</a>
+<a href="https://drive.google.com/drive/folders/1KiNUlVymLqi3xHLWzmE8tzplb7yizeot" target="_blank" class="btn blue">📂 Work Samples</a>
+<a href="https://www.linkedin.com/in/divyaprakashjain" target="_blank" class="btn linkedin">🔗 LinkedIn</a>
 </div>
+
+<p>📞 +91-XXXXXXXXXX</p>
+<p>📧 dividp@gmail.com</p>
+
 </header>
 
 <!-- ABOUT -->
@@ -61,11 +65,11 @@ Specialized in HL7, Mirth, and enterprise integrations.
 <h2>About Me</h2>
 <div class="card">
 <p>
-I am a Technical Writer specializing in healthcare and enterprise software documentation. My work focuses on simplifying complex integrations like HL7 messaging, Mirth channels, and LIS systems into clear, structured content.
+I am a Technical Writer specializing in healthcare and enterprise systems. I focus on simplifying complex integrations such as HL7 messaging, Mirth configurations, and LIS workflows into structured, user-friendly documentation.
 </p>
 
 <p>
-With experience in service manuals, API documentation, and system workflows, I collaborate closely with engineers and stakeholders to deliver documentation that improves usability, onboarding, and product understanding.
+My work bridges the gap between engineering and end users, enabling faster onboarding, better system understanding, and reduced support dependency.
 </p>
 </div>
 </section>
@@ -78,7 +82,7 @@ With experience in service manuals, API documentation, and system workflows, I c
 <p><b>Documentation:</b></p>
 <span class="tag">API Documentation</span>
 <span class="tag">User Guides</span>
-<span class="tag">SOPs</span>
+<span class="tag">Service Manuals</span>
 
 <p><b>Tools:</b></p>
 <span class="tag">MadCap Flare</span>
@@ -91,21 +95,18 @@ With experience in service manuals, API documentation, and system workflows, I c
 <span class="tag">Mirth</span>
 <span class="tag">Swagger</span>
 
-<p><b>Methodologies:</b></p>
-<span class="tag">Agile</span>
-<span class="tag">Content Strategy</span>
 </div>
 </section>
 
-<!-- IMPACT HIGHLIGHTS -->
+<!-- IMPACT -->
 <section>
 <h2>Impact Highlights</h2>
 <div class="card">
 <ul>
-<li>Improved onboarding efficiency by documenting system workflows</li>
-<li>Simplified HL7 messaging and Mirth configurations for developers</li>
-<li>Enhanced documentation quality through structured review and editing</li>
-<li>Enabled better integration understanding across teams</li>
+<li>Improved onboarding efficiency through structured documentation</li>
+<li>Simplified complex HL7 workflows for developers</li>
+<li>Reduced dependency on support teams</li>
+<li>Enhanced documentation clarity and consistency</li>
 </ul>
 </div>
 </section>
@@ -115,37 +116,38 @@ With experience in service manuals, API documentation, and system workflows, I c
 <h2>Case Studies</h2>
 
 <div class="card">
-<h3>Case Connect Service Manual</h3>
-
-<p><b>Problem:</b> Complex installation and configuration process for healthcare integration system.</p>
-
-<p><b>Solution:</b> Created structured service manual covering installation, setup, and troubleshooting.</p>
-
-<p><b>Impact:</b> Reduced dependency on support teams and improved system setup clarity.</p>
-
-<p><b>Tools:</b> DITA/XML, Healthcare Systems</p>
+<h3>1. Case Connect Service Manual</h3>
+<p><b>Problem:</b> Complex installation and configuration process.</p>
+<p><b>Solution:</b> Created structured service manual with step-by-step guidance.</p>
+<p><b>Impact:</b> Reduced support dependency and improved usability.</p>
 </div>
 
 <div class="card">
-<h3>Mock LIS Integration (HL7 + Mirth)</h3>
-
-<p><b>Problem:</b> Developers struggled to understand HL7 workflows and integration logic.</p>
-
-<p><b>Solution:</b> Documented message flows, Mirth channels, and API configurations.</p>
-
-<p><b>Impact:</b> Improved development efficiency and reduced integration errors.</p>
-
-<p><b>Tools:</b> HL7, Mirth, API Documentation</p>
+<h3>2. Case Connect Product Overview</h3>
+<p><b>Problem:</b> Users lacked understanding of system architecture.</p>
+<p><b>Solution:</b> Developed overview documentation explaining workflows and integration.</p>
+<p><b>Impact:</b> Improved user understanding and adoption.</p>
 </div>
 
 <div class="card">
-<h3>Technical Content Review</h3>
+<h3>3. Mock LIS Integration (HL7 + Mirth)</h3>
+<p><b>Problem:</b> Developers struggled with HL7 messaging flows.</p>
+<p><b>Solution:</b> Documented API flows, message types, and configurations.</p>
+<p><b>Impact:</b> Reduced errors and improved development efficiency.</p>
+</div>
 
-<p><b>Problem:</b> Inconsistent and unclear business documentation.</p>
+<div class="card">
+<h3>4. Multi-Site Configuration Documentation</h3>
+<p><b>Problem:</b> Complex multi-site message routing.</p>
+<p><b>Solution:</b> Documented architecture and data flow.</p>
+<p><b>Impact:</b> Improved system clarity and integration understanding.</p>
+</div>
 
+<div class="card">
+<h3>5. Technical Content Review</h3>
+<p><b>Problem:</b> Inconsistent documentation across teams.</p>
 <p><b>Solution:</b> Reviewed and refined documents with structured feedback.</p>
-
-<p><b>Impact:</b> Improved clarity, consistency, and stakeholder communication.</p>
+<p><b>Impact:</b> Improved clarity and stakeholder communication.</p>
 </div>
 
 </section>
@@ -155,70 +157,52 @@ With experience in service manuals, API documentation, and system workflows, I c
 <h2>Writing Philosophy</h2>
 <div class="card">
 <p>
-I believe documentation should bridge the gap between complex systems and user understanding. My approach focuses on clarity, structure, and usability — ensuring users can easily navigate and apply the information.
+Great documentation is not just about writing — it’s about enabling users to succeed. I focus on clarity, structure, and usability to ensure content is actionable and easy to understand.
 </p>
 </div>
 </section>
 
-<!-- VISUAL PROOF -->
-  <section>
+<!-- WORK SAMPLES -->
+<section>
 <h2>Work Samples</h2>
-<div class="card">
+<div class="card" style="text-align:center;">
 
-<p>Explore my technical documentation and project work:</p>
+<p><b>Explore my documentation:</b></p>
 
-<ul>
-<li>📘 Service Manuals (Installation & Troubleshooting)</li>
-<li>⚙️ API & Integration Documentation (HL7, Mirth)</li>
-<li>📄 Product Overview & System Architecture Docs</li>
-<li>📊 Technical Review & Editing Samples</li>
+<ul style="text-align:left; display:inline-block;">
+<li>Service Manuals</li>
+<li>API Documentation</li>
+<li>Integration Docs</li>
+<li>Review Samples</li>
 </ul>
 
-<br>
+<br><br>
 
-<a href="https://drive.google.com/drive/folders/1KiNUlVymLqi3xHLWzmE8tzplb7yizeot" target="_blank">
-👉 View All Work Samples
+<a href="https://drive.google.com/drive/folders/1KiNUlVymLqi3xHLWzmE8tzplb7yizeot" target="_blank" class="btn blue">
+👉 Open Work Samples
 </a>
 
 </div>
-  </section>
+</section>
 
 <!-- CONTACT -->
 <section>
 <h2>Contact</h2>
 <div class="card">
-
 <p>📧 Email: dividp@gmail.com</p>
-
-<p>📞 Phone: +91-9980435940</p>
-
+<p>📞 Phone: +91-XXXXXXXXXX</p>
 <p>
-🔗 <a href="https://www.linkedin.com/in/divyaprakashjain" target="_blank">LinkedIn Profile</a>
+🔗 <a href="https://www.linkedin.com/in/divyaprakashjain" target="_blank">LinkedIn</a>
 </p>
-
 </div>
 </section>
-  
-<!-- RESUME -->
-<section>
-<h2>Resume</h2>
-<div class="card">
 
-<p>Download or view my latest resume:</p>
-
-<a href="https://drive.google.com/drive/folders/1QGvD4c_IFJYAbW-vyVs0vIczJ-UPAL-B" target="_blank">
-👉 View / Download Resume
-</a>
-
-</div>
-</section>
-  
 <!-- CTA -->
 <section>
 <div class="card" style="text-align:center;">
 <h2>Let’s Work Together 🚀</h2>
 <p>
-Open to Technical Writing roles in API documentation, healthcare systems, and enterprise software.
+Open to Technical Writing roles in API, healthcare, and enterprise domains.
 </p>
 </div>
 </section>
